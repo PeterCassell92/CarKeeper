@@ -1,6 +1,28 @@
 <template>
-  <div class="hello">
-  </div>
+  <v-container
+    fill-height
+    fluid
+    class="home-container"
+  >
+    <v-row
+      class="justify-sm-center"
+      justify="center"
+      align="center"
+    >
+      <v-col
+        class="login"
+        cols="4"
+      >
+        <v-card>Login</v-card>
+      </v-col>
+      <v-col
+        cols="4"
+        class="register"
+      >
+        <v-card>Register</v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
