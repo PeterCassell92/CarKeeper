@@ -5,7 +5,6 @@
     class="home-container"
   >
     <v-row
-      class="justify-sm-center"
       justify="center"
       align="center"
     >
@@ -13,13 +12,39 @@
         class="login"
         cols="4"
       >
-        <v-card>Login</v-card>
+        <v-card>
+          Login
+          <div class="field-container">
+            <v-text-field 
+              v-model="loginEmail"
+              placeholder="Email"
+            />
+            <v-text-field 
+              v-model="loginPassword"
+              placeholder="Password"
+            />
+            <v-btn @click="login">Login</v-btn>
+          </div>
+        </v-card>
       </v-col>
       <v-col
         cols="4"
         class="register"
       >
-        <v-card>Register</v-card>
+        <v-card>
+          <div>Register</div>
+          <div class="field-container">
+            <v-text-field 
+              v-model="registerEmail"
+              placeholder="Email"
+            />
+            <v-text-field 
+              v-model="registerPassword"
+              placeholder="Password"
+            />
+            <v-btn @click="register">Register</v-btn>
+          </div>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -30,9 +55,20 @@ export default {
   name: 'Home',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      registerEmail: '',
+      registerPassword: '',
+      loginEmail: '',
+      loginPassword: ''
     };
   },
+  methods: {
+    register(){
+
+    },
+    login(){
+      
+    }
+  }
 };
 </script>
 
@@ -51,5 +87,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.field-container{
+  margin: 10px;
 }
 </style>

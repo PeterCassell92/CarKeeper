@@ -51,23 +51,23 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
-      {
-        test: /\.s(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            // Requires >= sass-loader@^8.0.0
-            options: {
-              implementation: require('sass'),
-              sassOptions: {
-                indentedSyntax: true // optional
-              },
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.s(c|a)ss$/,
+      //   use: [
+      //     'vue-style-loader',
+      //     'css-loader',
+      //     {
+      //       loader: 'sass-loader',
+      //       // Requires >= sass-loader@^8.0.0
+      //       options: {
+      //         implementation: require('sass'),
+      //         sassOptions: {
+      //           indentedSyntax: true // optional
+      //         },
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
